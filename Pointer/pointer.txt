@@ -1,0 +1,109 @@
+// What is a Pointer in C?
+C pointer is the derived data type that is used to store the address of 
+another variable and can also be used to access and manipulate the variable's 
+data stored at that location. The pointers are considered as derived data types.
+
+With pointers, you can access and modify the data located in the memory, 
+pass the data efficiently between the functions, and create dynamic data 
+structures like linked lists, trees, and graphs.
+
+// How to Use Pointers?
+The use of pointers in C can be divided into three steps:
+
+1 Pointer Declaration
+Ex-
+int *ptr;
+
+2 Pointer Initialization
+Ex-
+int var = 10;
+int * ptr;
+ptr = &var;
+
+Ex-
+int *ptr = &var;
+
+Note: It is recommended that the pointers should always be initialized to
+some value before starting using it. Otherwise, it may lead to number of 
+errors.
+
+3 Pointer Dereferencing
+Ex-
+// C program to illustrate Pointers
+#include <stdio.h>
+
+void pointer()
+{
+    int var = 10;
+
+    // declare pointer variable
+    int* ptr;
+
+    // note that data type of ptr and var must be same
+    ptr = &var;
+
+    // assign the address of a variable to a pointer
+    printf("Value at ptr = %p \n", ptr);
+    printf("Value at var = %d \n", var);
+    printf("Value at *ptr = %d \n", *ptr);
+}
+
+// Driver program
+int main()
+{
+    pointer();
+    return 0;
+}
+
+// output
+Value at ptr = 0x7ffca84068dc 
+Value at var = 10 
+Value at *ptr = 10 
+
+
+// Types of Pointers in C
+
+1. Integer Pointers Syntax - int *ptr;
+2. Array Pointer Syntax - char *ptr = &array_name;
+3. Structure Pointer Syntax - struct struct_name *ptr;
+4. Function Pointers Syntax - int (*ptr)(int, char);
+5. Double Pointers Syntax - datatype ** pointer_name;
+6. NULL Pointer Syntax - data_type *pointer_name = NULL;    or   pointer_name = NULL;
+7. Void Pointer Syntax - void * pointer_name;
+8. Wild Pointers Syntax - int *ptr; char *str;
+9. Constant Pointers system - data_type * const pointer_name;
+10. Pointer to Constant Syntax - const data_type * pointer_name;
+
+
+// In C, it is important to understand the purpose of the following two
+ operators in the context of pointer mechanism −
+
+The & Operator − It is also known as the "Address-of operator". 
+It is used for Referencing which means taking the address of an existing 
+variable (using &) to set a pointer variable.
+
+The * Operator − It is also known as the "dereference operator". 
+Dereferencing a pointer is carried out using the * operator to get the value 
+from the memory address that is pointed by the pointer.
+
+
+Size of Pointers in C
+The size of the pointers in C is equal for every pointer type. The size of the pointer does not depend on the type it is pointing to. It only depends on the operating system and CPU architecture. The size of pointers in C is 
+
+8 bytes for a 64-bit System
+4 bytes for a 32-bit System
+
+
+C Pointer Arithmetic
+The Pointer Arithmetic refers to the legal or valid arithmetic operations that
+can be performed on a pointer. It is slightly different from the ones that we 
+generally use for mathematical calculations as only a limited set of operations 
+can be performed on pointers. These operations include:
+
+Increment in a Pointer
+Decrement in a Pointer
+Addition of integer to a pointer
+Subtraction of integer to a pointer
+Subtracting two pointers of the same type
+Comparison of pointers of the same type.
+Assignment of pointers of the same type.
