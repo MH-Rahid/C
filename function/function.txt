@@ -1,0 +1,58 @@
+// what is function ?
+function is basically a set statements that takes inputs, perform some computation
+and produces output.
+
+// Components of a Function
+A function in C has the following components:
+
+1 Return Type: Specifies the type of value the function returns 
+(e.g., int, float, void).
+2 Function Name: Identifier used to call the function.
+3 Parameters: Variables passed to the function (optional).
+4 Function Body: Contains the statements that define the task the function 
+performs.
+5 Return Statement: Used to return a value to the calling function 
+(optional \for void functions).
+
+
+// Types of Functions
+1 Library Functions: Predefined functions provided by the C standard library 
+(e.g., printf, scanf, strlen).
+2 User-Defined Functions: Functions defined by the programmer.
+
+
+// Syntax
+Function Declaration (Prototype)
+Declares a function to the compiler. This is optional if the function is 
+defined before it is called.
+
+return_type function_name(parameter_list);
+
+
+// Call by Value
+The function receives a copy of the arguments. Modifications to parameters do not affect the original variables.
+
+void modify(int x) {
+    x = 10; // Changes only the local copy
+}
+
+int main() {
+    int num = 5;
+    modify(num);
+    printf("%d\n", num); // Output: 5
+    return 0;
+}
+
+// Call by Reference
+The function receives the address of arguments, allowing modifications to the original variables.
+
+void modify(int *x) {
+    *x = 10; // Changes the original variable
+}
+
+int main() {
+    int num = 5;
+    modify(&num);
+    printf("%d\n", num); // Output: 10
+    return 0;
+}
