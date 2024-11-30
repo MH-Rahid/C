@@ -1,0 +1,23 @@
+// Recursion in C
+In C, recursion is a programming technique where a function calls itself 
+directly or indirectly to solve a problem. Recursion divides the problem into 
+smaller sub problems, making the logic simpler for tasks that have repetitive or 
+self-similar patterns.
+
+Syntax of a Recursive Function
+return_type function_name(parameters) {
+    if (base_condition) {
+        // Base case
+        return value;
+    } else {
+        // Recursive case
+        return function_name(smaller_problem);
+    }
+}
+
+
+// type of recursion 
+1 direct recursion
+2 indirect recursion
+3 tail recursion
+4 non - tail recursion
