@@ -1,0 +1,45 @@
+Segments of Main Memory
+Code Segment (Text Segment):
+
+Purpose: Stores the program's executable code or instructions.
+Details:
+Contains the compiled instructions of a program.
+Read-only to prevent accidental modification during execution.
+Shared between processes if multiple instances of the same program are running.
+Example: The instructions for a loop in a program.
+
+
+Data Segment:
+
+Purpose: Stores initialized global and static variables used by a program.
+Details:
+Contains variables explicitly initialized in the code (e.g., int x = 10;).
+The size is fixed during program execution.
+Example: Predefined values like configuration settings.
+
+
+BSS Segment (Block Started by Symbol):
+
+Purpose: Stores uninitialized global and static variables.
+Details:
+Allocated at runtime but doesn’t occupy actual memory in the executable file.
+Initialized to zero by default when the program starts.
+Example: static int count; (uninitialized but later used in the program).
+
+
+Heap Segment:
+
+Purpose: Used for dynamic memory allocation during program execution.
+Details:
+Grows upwards in memory as new memory is allocated using functions like malloc or new.
+Managed explicitly by the programmer; memory must be freed after use to avoid leaks.
+Example: Allocating memory for an array of unknown size at runtime.
+
+
+Stack Segment:
+
+Purpose: Stores temporary data such as function call parameters, return addresses, and local variables.
+Details:
+Grows downwards in memory.
+Automatically managed; memory is allocated when a function is called and deallocated when the function exits.
+Example: Local variables inside a function (int temp = 5;).
