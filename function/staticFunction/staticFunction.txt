@@ -1,0 +1,26 @@
+In C, a static function is a function whose scope is limited to the file in 
+which it is declared. It is not visible or accessible from other files. 
+This is achieved by using the static keyword in the function's declaration.
+
+// Key Characteristics of Static Functions in C
+
+File Scope:
+A static function can only be accessed within the file where it is defined.
+It is not exposed to other files during the linking phase.
+
+Encapsulation:
+Static functions help achieve data hiding by restricting access to 
+implementation details within a specific file.
+
+Separate Instances:
+Even if two files define static functions with the same name, they do not 
+conflict because each has its own separate scope.
+
+Static Variables in Static Functions:
+Static variables within a static function retain their value between function 
+calls but are limited to the function's scope.
+
+Syntax
+static return_type function_name(parameters) {
+    // Function body
+}
