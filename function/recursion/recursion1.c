@@ -15,3 +15,4 @@ int main(int argc, char const* argv[])
     printf("num : %4d ", fun(num));
     return 0;
 }
+

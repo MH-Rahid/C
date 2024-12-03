@@ -17,7 +17,36 @@ return_type function_name(parameters) {
 
 
 // type of recursion 
-1 direct recursion
-2 indirect recursion
+1 direct recursion - a function called direct recursion if it calls it self again.
+Ex - 
+fun( ){
+    fun();
+}
+2 indirect recursion - a function (let say fun) is called indirect recursion if 
+it calls another function (let say fun2) and then fun2 calls fun directly or 
+indirectly.
+Ex - 
+fun(){
+    fun2();
+}
+fun2(){
+    fun();
+}
+
 3 tail recursion
 4 non - tail recursion
+
+
+
+
+
+
+
+// if get(6) function is being called in main() then how many times will the get()
+// function invoked before returning to the main()?
+void get(int n) {
+    if (n < 1) return;
+    get(n - 1);
+    get(n - 3);
+    printf("%d ", n);  
+}

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 static void counterFunction() {
-    int count = 0;  // Static variable retains its value
+    static int count = 0;  // Static variable retains its value
     count++;
     printf("Counter: %d\n", count);
 }
