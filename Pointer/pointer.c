@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(int argc, char const* argv[])
 {
-    printf("Hi, I am Mehedi Hasan Mehedi");
+    int x = 4, * p; *p = x;
+    printf("%d", *p);
     return 0;
 }
