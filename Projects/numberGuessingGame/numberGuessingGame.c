@@ -24,7 +24,5 @@ int main(int argc, char const* argv[])
 
     } while (guessNumber != randomNumber);
 
-
-
     return 0;
 }
